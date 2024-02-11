@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+import React, { createContext, useState } from 'react';
 import './App.css';
+import TodoContainer from './components/TodoContainer';
+
+export const context = createContext(null)
 
 function App() {
+
+
+  const[active, setActive] = useState(false)
+  const[completed, setCompleted] = useState(false)
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <context.Provider value={{active, setActive, completed,setCompleted}}>
+      <div className="App">
+        <TodoContainer/>
+      </div>
+    </context.Provider>
+
   );
 }
 

@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
+.App{
+  display: flex;
+  justify-content: center;
+  width: 100vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-container{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h1{
+  color:#FF0000;
+  font-size: 42px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h5{
+  color: #333;
+}
+
+form{
+  display: flex;
+  align-items: center;
+}
+
+.input-container{
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  width: 450px;
+  height: 40px;
+  gap: 10px;
+  width: 100%;
+
+}
+
+.input-container input{
+  width: 450px;
+  padding: 15px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+}
+
+.border{
+  border: 1px solid #FF0000;
+  border-style: groove;
+}
+
+.task-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  width: 100%;
+  padding:  0px 20px;
+  gap: 20px;
+}
+
+.task{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.footer-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  width: 100%;
+  padding:  0px 20px;
+  gap: 20px;
+}
+
+.footer-container button{
+  border: none;
+  background-color: transparent;
+  padding: 5px;
+  border: 1px solid transparent;
+}
+
+.footer-container button:hover{
+  border: 1px solid #FF0000;
+}
+
+.active-list{
+  border: 1px solid #FF0000 !important;
+}
+
+.status{
+  display: flex;
+  gap: 5px;
+}
+
+.cross{
+  display: none;
+}
+
+.task-container:hover .cross {
+  display: block;
 }
